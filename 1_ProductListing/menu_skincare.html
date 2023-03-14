@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #containner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #left {
+        color: rgb(100, 93, 93);
+        display: flex;
+        width: 245px;
+        justify-content: space-around;
+    }
+    
+    #center {
+        display: flex;
+        margin: 8px;
+    }
+    
+    #right {
+        display: flex;
+        width: 410px;
+        justify-content: space-around;
+    }
+    
+    #containner_2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 150px;
+        
+    }
+      
+    #Left_2 {
+
+        display: flex;
+        justify-content: space-around;
+        width: 800px;
+        
+    }
+    .Left_2 {
+        color: white;
+        font-size: 20px;
+        height: 50px;
+       
+    }
+
+    #right_2{
+        display: flex;
+        width: 100px;
+        justify-content: space-around;
+    }
+    .img_1 {
+        position: relative;
+        top: 6px;
+        margin-left: 9px;
+    }
+    .img_1_title {
+        position: absolute;
+        top: 110px;
+        left: 130px;
+        color: #323842;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .img_1_content {
+        color: #7a787a;
+        position: absolute;
+        top: 190px;
+        left: 130px;
+        font-size: 20px;
+        width: 420px;
+        line-height: 30px;
+    }
+    .all_product {
+        display: flex;
+        justify-content: space-around;
+        width: 85%;
+        margin:  0 auto;
+        padding-top: 65px;
+    }
+    .item_products {
+        background-color: #459d7a;
+        padding: 15px 30px;
+        color: white;
+        border-right: 1px solid #459d7a;
+        font-size: 20px;
+        display: inline-block;
+        text-align: center;
+    }
+    .item_face {
+        color: #459d7a;
+        width: 179px;
+        height: 52px;
+        padding: 15px 30px;
+        font-size: 20px;
+        background-color: white;
+        border-right: 0.5px solid #459d7a;
+        display: inline-block;
+        text-align: center;
+    }
+    .item_Body{
+        color: #459d7a;
+        width: 179px;
+        height: 52px;
+        padding: 15px 30px;
+        font-size: 20px;
+        background-color: white;
+        display: inline-block;
+        text-align: center;
+    }
+    .search_products {
+        display: flex;
+        padding-right: 56px;
+        position: relative;
+        align-items: center;
+    }
+    .input_right {
+        width: 300px;
+        height: 40px;
+        font-size: 16px;
+        padding: 0px 20px 0px 40px;
+        border-radius: 10px;
+        outline: none;
+        border: solid gray 2px;
+        box-sizing: border-box;
+    }
+    .sort_by {
+     background: #f3f4f6;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #565e6c;
+    }
+    .products {
+        display: flex;
+        margin-bottom: 25px;
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 65px;
+    }
+    .product_item {
+        position: relative;
+    }
+    .products_title_img{
+    position: absolute;
+    width: 73px;
+    height: 27px;
+    background: #ffc970;
+    right: 10px;
+    top: 13px;
+    text-align: center;
+    line-height: 27px;
+    border-radius: 15px;
+    font-size: 12px;
+    color: #8c5d11;
+    }
+    .products_title_item{  
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #3b3e42;
+    }
+    .products_item_content{
+    margin: 8px 0;
+    color: #a1a2a4;
+    font-weight: 400;
+    }
+    .first_price{
+        font-size: 35px;
+        color: #323842;
+        font-weight: bold;
+    }
+    .second_price{
+        color: rgb(202, 205, 210);
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 5px;
+        margin-bottom: 20px;
+}
+.cardSale{
+    position: absolute;
+    bottom: -13px;
+    right: 20px;
+}
+footer {
+    width: 1441px;
+    height: 470px;
+    background-color: #1d2128;
+    padding: 95px 130px;
+    margin-left: 8px;
+}
+.number {
+    width: 20px;
+    height: 20px;
+    color: #c2c4ca;
+    text-align: center;
+    font-size: 18px;
+}
+.footer_left{
+    display: flex;
+}
+.footer_item {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+}
+.footer_left-title {
+    color: #bdc0c6;
+    font-size: 24px;
+    font-weight: bolder;
+}
+.footer_left-content {
+    color: #d5d8dd;
+    padding-top: 26px;
+}
+.btEnglish{
+    color: #d5d8dd;
+    border: 1px solid #d5d8dd;
+    width: 129px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+.Subscribe_item{
+    color: white;
+    width: 179px;
+    height: 56px;
+    padding: 17px 30px;
+    font-size: 20px;
+    background-color: #459d7a;
+    transition: all 0.25s linear;
+    display: inline-block;
+    text-align: center;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -8%;
+}
+
+</style>
+
+<body>
+    <div id="containner">
+        <div id="left">
+            <div>Shop</div>
+            <div>Offers</div>
+            <div>Our story</div>
+            <div>Blog</div>
+
+        </div>
+        <div id="center">
+            <img src="logo.png" alt="">
+
+        </div>
+        <div id="right">
+            <input type="" placeholder="Seach product...">
+            <img src="cart.png" alt="">
+            <img src="andanh.png" alt="">
+        </div>
+    </div>
+
+    <div class="img_1">
+        <img src="1.png" alt="">
+        <h2 class="img_1_title ">Gift for your skin</h2>
+        <p class="img_1_content">Aliquip fugiat ipsum nostrud ex et eu incididunt quis minim doore excepteur voluptate</p>
+    </div> 
+</div>
+
+<div class="all_product">
+    <div>
+        <span class="item_products">All products</span>
+        <span class="item_face">Face</span>
+        <span class="item_Body">Body</span>
+    </div>
+    <div class="search_products"></div>
+        <input type="text" class="input_right" placeholder="Search product...">
+        <div class="sort_by">
+            <span>Sort by</span>
+        </div>
+</div>
+
+<div class="products">
+    <div class="product_item">
+        <img src="18$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+          <!-- <h3 class="products_title_item">Products Title</h3>
+    <p class="products_item_content">Labore sinit ipsume dolore mollit</p>
+    <div>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale"> -->
+    </div>
+    <div class="product_item">
+        <img src="22$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div>
+    <div class="product_item">
+        <img src="32$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div> 
+    <div class="product_item">
+        <img src="22$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div>
+</div>
+
+<div class="products">
+    <div class="product_item">
+        <img src="31$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+          <!-- <h3 class="products_title_item">Products Title</h3>
+    <p class="products_item_content">Labore sinit ipsume dolore mollit</p>
+    <div>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale"> -->
+    </div>
+    <div class="product_item">
+        <img src="40$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div>
+    <div class="product_item">
+        <img src="26$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div> 
+    <div class="product_item">
+        <img src="18$_2.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div>
+</div>
+
+<div class="products">
+    <div class="product_item">
+        <img src="52$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+          <!-- <h3 class="products_title_item">Products Title</h3>
+    <p class="products_item_content">Labore sinit ipsume dolore mollit</p>
+    <div>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale"> -->
+    </div>
+    <div class="product_item">
+        <img src="47$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div>
+    <div class="product_item">
+        <img src="44$.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div> 
+    <div class="product_item">
+        <img src="32$_2.png" alt="">
+        <span class="products_title_img">Best-Seller</span>
+        <h3>Products Title</h3>
+        <p>Labore sinit ipsume dolore mollit</p>
+        <span class="first_price">$32</span>
+        <span class="second_price">$42</span>
+        <img src="cuahang.png" alt class="cardSale">
+    </div>
+    <div>
+        <img src="icon_left.png" alt="">
+        <span class="number">1</span>
+        <span class="number">2</span>
+        <span class="number">3</span>
+        <span class="number">4</span>
+        <img src="icon_right.png" alt="">
+    </div>
+</div>  
+  
+<footer>
+    <div class="footer_left">
+        <div class="footer_item">
+            <span class="footer_left-title">About</span>
+            <span class="footer_left-content">Home</span>
+            <span class="footer_left-content">Shop</span>
+            <span class="footer_left-content">Our story</span>
+            <span class="footer_left-content">Blogs</span>
+            <div class="btEnglish"> <span>English</span></div>
+        </div>
+
+        <div class="footer_item">
+            <span class="footer_left-title">Help</span>
+            <span class="footer_left-content">Shipping & Returns</span>
+            <span class="footer_left-content">Track Order</span>
+            <span class="footer_left-content">FAQs</span>
+        </div>
+        <div  class="footer_item">
+            <span class="footer_left-title">Contact</span>
+            <span class="footer_left-content">Phone:</span>
+            <span class="footer_left-content" style="font-weight: bolder;">(+1) 123 456 7893</span>
+            <span class="footer_left-content">Email:</span>
+            <span class="footer_left-content" style="font-weight: bolder;">name@gmail.com</span>
+            <span class="footer_left-content">Blogs</span>
+        </div>
+        <div class="footer_item" style="margin-left: 200px;">
+            <span class="footer_left-title">Receive new promotions</span>
+            <span class="footer_left-content">Duis ea tempor commodo amet reprehende</span>
+            <div>
+                <input type="text" placeholder="Input your email">
+            <div class="Subscribe_item">
+                <span>Subscribe</span>
+            </div>
+        </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
